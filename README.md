@@ -2,6 +2,8 @@
 
 A Streamlit app to calculate daily calorie needs and generate meal plans using OpenAI.
 
+Link: https://mealmind-ai-gzkje8hp4ssvpj7ndaid5g.streamlit.app/
+
 ## Setup
 1. Install dependencies: `pip install -r requirements.txt`
 2. Add your OpenAI API key to `.env`
