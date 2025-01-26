@@ -13,10 +13,10 @@ if 'maintenance_calories' not in st.session_state:
 load_dotenv()
 
 # Debugging: Check session state
-st.write("Debug Info:")
-st.write(f"Show Meal Planner: {st.session_state.get('show_meal_planner', False)}")
-st.write(f"Daily Calories: {st.session_state.get('daily_calories', None)}")
-st.write(f"Maintenance Calories: {st.session_state.get('maintenance_calories', None)}")
+#st.write("Debug Info:")
+#st.write(f"Show Meal Planner: {st.session_state.get('show_meal_planner', False)}")
+#st.write(f"Daily Calories: {st.session_state.get('daily_calories', None)}")
+#st.write(f"Maintenance Calories: {st.session_state.get('maintenance_calories', None)}")
 
 
 st.title("AI Calorie & Meal Planner 🍎")
@@ -176,7 +176,7 @@ if st.session_state.show_meal_planner:
 
         try:
             import openai
-            openai.api_key = st.secrets("OPENAI_API_KEY")
+            openai.api_key = st.secrets["OPENAI_API_KEY"]
 
             with st.spinner("🧠 AI Chef is crafting your perfect meal plan..."):
                 response = openai.ChatCompletion.create(
@@ -224,6 +224,11 @@ if st.session_state.show_meal_planner:
     #if st.button("← Back to Calorie Calculator"):
         #st.session_state.show_meal_planner = False
         #st.experimental_rerun()
+
+    if st.button("← Back to Calorie Calculator"):
+        st.session_state.show_meal_planner = False  # Reset session state
+        st.experimental_rerun()  # Refresh the app to go back
+
 
 #json_response = {"status":200, "text":"response successful!"}
 #st.write(json_response)
