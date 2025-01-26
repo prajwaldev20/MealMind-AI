@@ -176,7 +176,7 @@ if st.session_state.show_meal_planner:
 
         try:
             import openai
-            openai.api_key = os.getenv("OPENAI_API_KEY")
+            openai.api_key = st.secrets("OPENAI_API_KEY")
 
             with st.spinner("🧠 AI Chef is crafting your perfect meal plan..."):
                 response = openai.ChatCompletion.create(
