@@ -25,12 +25,6 @@ st.header("Step 1: To Calulate Your Daily Calories ")
 
 st.subheader("Built By prajwaldev20 ")
 
-"""
-st.info("This is an information")
-st.warning("This is a warning")
-st.error("This is an error")
-
-"""
 if not st.session_state.show_meal_planner:  # Only show Step 1 if Meal Planner is not active
 
     with st.form("calorie_form"):
@@ -117,9 +111,11 @@ if not st.session_state.show_meal_planner:  # Only show Step 1 if Meal Planner i
         # Meal planner button
     if st.button("Generate Personalized Meal Plan 🍽️"):
         st.session_state.show_meal_planner = True # Update session state
+        st.rerun()  # Refresh the app to go back
 
 
-if st.session_state.show_meal_planner:
+else:
+    # st.session_state.show_meal_planner:
     st.header("Step 2: Generate Your AI-Powered Meal Plan 🍽️")
     st.markdown("---")
 
@@ -227,7 +223,8 @@ if st.session_state.show_meal_planner:
 
     if st.button("← Back to Calorie Calculator"):
         st.session_state.show_meal_planner = False  # Reset session state
-        st.experimental_rerun()  # Refresh the app to go back
+        st.rerun()
+        
 
 
 #json_response = {"status":200, "text":"response successful!"}
