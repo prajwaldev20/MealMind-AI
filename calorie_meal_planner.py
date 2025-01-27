@@ -160,6 +160,11 @@ else:
         - Protein focus: {protein_focus}% of macros  # Removed space before %
         - Exclude ingredients: {exclude_ingredients if exclude_ingredients else 'Nothing'}
 
+        Important Instructions:
+        1. Do NOT include any of the excluded ingredients (e.g., {exclude_ingredients}). Meals containing these ingredients will be invalid.
+        2. If an excluded ingredient is necessary, replace it with a suitable alternative that fits the cuisine and macros.
+
+
         Include for each meal (breakfast, lunch, dinner, 2 snacks):
         1. Meal name with calorie count
         2. Macros breakdown (protein/carbs/fat)
