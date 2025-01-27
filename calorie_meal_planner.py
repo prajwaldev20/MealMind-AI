@@ -158,7 +158,7 @@ else:
         - Dietary preferences: {', '.join(dietary_prefs) if dietary_prefs else 'None'}
         - Cuisine style: {cuisine}
         - Protein focus: {protein_focus}% of macros  # Removed space before %
-        - Exclude: {exclude_ingredients if exclude_ingredients else 'Nothing'}
+        - Exclude ingredients: {exclude_ingredients if exclude_ingredients else 'Nothing'}
 
         Include for each meal (breakfast, lunch, dinner, 2 snacks):
         1. Meal name with calorie count
